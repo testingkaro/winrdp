@@ -10,8 +10,8 @@ RUN dpkg -i vagrant_$(curl -s https://checkpoint-api.hashicorp.com/v1/check/vagr
 RUN vagrant plugin install vagrant-libvirt
 RUN vagrant box add --provider libvirt peru/windows-10-enterprise-x64-eval
 RUN vagrant init peru/windows-10-enterprise-x64-eval
-COPY startup.sh /
-ENTRYPOINT ["/startup.sh"]
+COPY winrdp.sh /
+ENTRYPOINT ["/winrdp.sh"]
 #!/bin/bash
 set -eou pipefail
 
