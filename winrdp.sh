@@ -1,3 +1,4 @@
+#!/bin/bash
 FROM ubuntu:18.04
 RUN apt-get update -y
 RUN apt-get install -y qemu-kvm libvirt-daemon-system libvirt-dev
